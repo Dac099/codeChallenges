@@ -1,0 +1,161 @@
+:root {
+  --font_family: 'Overpass', sans-serif;
+  --paragraph_font: 15px;
+  --white: hsl(0,0%,100%);
+  --lit_gray: hsl(217, 12%, 63%);
+  --mid_gray: hsl(216, 12%, 54%);
+  --circle_blue: hsl(213, 19%, 18%);
+  --vdar_blue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+  --dar_blue: hsl(210, 21%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--vdar_blue);
+  color: var(--white);
+  min-width: 375px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 9fr 1fr;
+  place-content: center;
+  font-family: var(--font_family);
+}
+
+.container {
+  display: grid;
+  place-content: center;
+}
+
+.rating-card {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  align-self: center;
+  justify-self: center;
+  width: 350px;
+  height: 400px;
+  padding: 25px;
+  border-radius: 5%;
+  background-color: var(--dar_blue);
+}
+
+.rating-card--star {
+  background-color: var(--circle_blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.rating-card--text p {
+  font-size: 15px;
+  margin-top: 15px;
+  color: var(--lit_gray);
+}
+
+.rating-card--nums {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.rating-card--nums li {
+  display: grid;
+  place-content: center;
+  background-color: var(--circle_blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--lit_gray);
+  cursor: pointer;
+}
+
+.rating-card--nums li:hover {
+  background-color: var(--mid_gray);
+  color: var(--white);
+}
+
+.rating-card--nums li:active { 
+  background-color: var(--orange);
+}
+
+.rating--selected { 
+  background-color: var(--orange);
+}
+
+.rating-card--btn {
+  height: 70%;
+  align-self: center;
+  border-radius: 30px;
+  border: none;
+  font-family: var(--font_family);
+  font-weight: 400;
+  font-size: 15px;
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.rating-card--btn:active {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+.attribution {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.thanks-card {
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  justify-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 350px;
+  height: 400px;
+  padding: 25px;
+  border-radius: 5%;
+  background-color: var(--dar_blue);
+}
+
+.thanks-card--rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  background-color: var(--circle_blue);
+  width: 70%;
+  height: 60%;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.thanks-card--text {
+  text-align: center;
+}
+
+.thanks-card--text p {
+  font-size: 15px;
+  margin-top: 15px;
+  color: var(--lit_gray);
+}
+
+@media only screen and (min-width: 780px) {
+  .rating-card {
+    width: 400px;
+  }
+}
