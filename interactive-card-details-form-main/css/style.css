@@ -77,7 +77,6 @@ main
   display: grid;
   justify-content: center;
   align-items: flex-end;
-  border: 2px solid red;
 }
 
 @media only screen and (min-width: 999px)
@@ -93,7 +92,6 @@ main
 .foreground--container
 {
   position: relative;
-  border: 2px solid blue;
   width: 350px;
   min-height: 260px;
 }
@@ -103,7 +101,6 @@ main
   .foreground--container
   {
     position: relative;
-    border: 2px solid blue;
     width: 450px;
     min-height: 350px;
   }
@@ -137,6 +134,7 @@ main
   height: 166px;
   position: absolute;
   bottom: 0px;
+  padding: 10px;
   background-image: url('../images/bg-card-front.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -157,6 +155,24 @@ main
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  justify-self: center;
+  align-self: flex-end;
+  letter-spacing: 3px;
+  word-spacing: 8px;
+}
+
+.card-front--name
+{
+  align-self: flex-end;
+  font-size: 13px;
+}
+
+.card-front--date
+{
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: 13px;
+
 }
 
 @media only screen and (min-width: 999px){
@@ -176,11 +192,118 @@ main
     position: absolute;
     bottom: 0px;
   }
+
+  .card-front--numbers
+  {
+    font-size: 25px;
+  }
 }
 
 .foreground--form
 {
   flex-basis: 500px;
-  border: 2px solid red;
+  min-height: 400px;
+  padding: 12px;
+  font-family: var(--font-family);
+}
 
+.foreground--form  form
+{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.foreground--form  form input:focus
+{
+  outline-color: var(--very-dark-violet);
+}
+
+.basic-input
+{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  justify-content: space-evenly;
+}
+
+.basic-input label
+{
+  color: var(--very-dark-violet);
+  letter-spacing: 2px;
+}
+
+.basic-input input
+{
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid var(--light-grayish-violet);
+  padding: 0px 10px;
+  font-size: 18px;
+  font-family: var(--font-family);
+}
+
+.basic-input input::placeholder{
+  color: var(--light-grayish-violet);
+}
+
+.extra-inputs
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-inputs section
+{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 90px;
+  justify-content: space-evenly;
+}
+
+.extra-inputs section label
+{
+  font-size: 15px;
+  letter-spacing: 2px;
+
+}
+
+.extra-inputs section input
+{
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid var(--light-grayish-violet);
+  padding: 0px 10px;
+  font-size: 18px;
+  font-family: var(--font-family);
+}
+
+.extra-inputs section input::placeholder{
+  color: var(--light-grayish-violet);
+}
+
+.grow-input
+{
+  min-width: 160px;
+}
+
+.foreground--form  form button
+{
+  height: 60px;
+  border-radius: 8px;
+  background-color: var(--very-dark-violet);
+  border: none;
+  color: var(--white);
+  font-size: 18px;
+  font-family: var(--font-family);
+  align-self: center;
+}
+
+@media only screen and (min-width: 1000px) {
+  .foreground--form
+  {
+    height: 500px;
+  }
 }
