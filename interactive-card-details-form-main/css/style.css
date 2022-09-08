@@ -250,8 +250,25 @@ main
 
 .extra-inputs
 {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  column-gap: 5px;
+}
+
+.extra-inputs .month-input
+{
+  justify-self: flex-start;
+}
+
+.extra-inputs .year-input
+{
+  justify-self: flex-start;
+}
+
+.extra-inputs .grow-input
+{
+  justify-self: flex-end;
+  min-width: 90%;
 }
 
 .extra-inputs section
@@ -284,11 +301,6 @@ main
   color: var(--light-grayish-violet);
 }
 
-.grow-input
-{
-  min-width: 160px;
-}
-
 .foreground--form  form button
 {
   height: 60px;
@@ -306,4 +318,9 @@ main
   {
     height: 500px;
   }
+}
+
+.attribution
+{
+  font-family: var(--font-family);
 }
