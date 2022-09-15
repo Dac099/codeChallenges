@@ -2,7 +2,8 @@ const cards = {
   card_front: {
     numbers: document.querySelector('.card-front--numbers'),
     user_name: document.querySelector('.card-front--name'),
-    date: document.querySelector('.card-front--date')
+    card_year: document.querySelector('.date-year'),
+    card_month: document.querySelector('.date-month')
   },
   card_back: {
     cvc: document.querySelector('.card-back--numbers')

@@ -3,7 +3,7 @@ import { fillSectionCard, formatString } from './fill_cards.js';
 import { cards } from './elements.js';
 
 const { name, number, month, year, code } = form;
-const { numbers, date, user_name } = cards.card_front;
+const { numbers, card_year, card_month, user_name } = cards.card_front;
 const { cvc } = cards.card_back;
 
 function readingForm(){
@@ -19,17 +19,15 @@ function readingForm(){
 
     card_numbers.splice(position, 1, number.value[position]);
     
-    console.log(formatString(card_numbers.join(''), str_numbers));
-
     fillSectionCard(numbers, formatString(card_numbers.join(''), str_numbers));
   });
 
   month.addEventListener('input', (e) => {
-    fillSectionCard(date, month.value);
+    fillSectionCard(card_month, month.value);
   });
 
   year.addEventListener('input', (e) => {
-    fillSectionCard(date, year.value);
+    fillSectionCard(card_year, year.value);
   });
 
   code.addEventListener('input', (e) => {
