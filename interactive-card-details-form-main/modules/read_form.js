@@ -2,7 +2,7 @@ import { form } from './elements.js';
 import { fillSectionCard, formatString } from './fill_cards.js';
 import { cards } from './elements.js';
 
-const { name, number, month, year, code } = form;
+const { name, number, month, year, code, submit, formFields } = form;
 const { numbers, card_year, card_month, user_name } = cards.card_front;
 const { cvc } = cards.card_back;
 
@@ -34,5 +34,6 @@ function readingForm(){
     fillSectionCard(cvc, code.value);
   });
 }
+
 
 export {readingForm};

@@ -16,7 +16,10 @@ const form = {
   month: document.querySelector('#card_month'),
   year: document.querySelector('#card_year'),
   code: document.querySelector('#card_code'),
-  submit: document.querySelector('#btn-submit')
+  submit: document.querySelector('#btn-submit'),
+  formFields: document.querySelector('#form')
 };
 
-export {cards, form};
+const formCoplete = document.querySelector('#form-complete');
+
+export {cards, form, formCoplete};

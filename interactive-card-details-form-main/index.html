@@ -32,7 +32,7 @@
       </section>
 
       <section class="foreground--form">
-        <form method="POST" autocomplete="on">
+        <form method="POST" autocomplete="on" id="form" >
 
           <section class="form--inputs basic-input">
             <label for="card_name">CARDHOLDER NAME</label>
@@ -65,14 +65,22 @@
             </section>
           </section>
                   
-          <button type="submit" id="btn-submit">Confirm </button>
+          <button id="btn-submit">Confirm</button>
         </form>
+        <section class="complete-form hide" id="form-complete">
+          <img src="./images/icon-complete.svg" alt="">
+          <div>
+            <h2>THANK YOU!</h2>
+            <p>We've added your card details</p>
+          </div>
+          <button>Continue</button>
+        </section>
       </section>
     </article>
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">David Ceja Zapata</a>.
+    Coded by <a href="http://davidcejazapata.com/dist/index.html" target="_blank">David Ceja Zapata</a>.
   </footer>
   <script src="./index.js" type="module"></script>
 </body>
